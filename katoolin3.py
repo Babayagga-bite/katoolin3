@@ -23,7 +23,7 @@ katoolin3 is a port of katoolin for python3.
 """
 
 __author__ = "s-h-3-l-l"
-__credits__ = ["LionSec"]
+__credits__ = ["LionSec" "b4b4y4gg4-bite"]
 __license__ = "GPL"
 
 import os
@@ -917,15 +917,6 @@ def all_packages():
         for pkg in PACKAGES[cat]:
             yield pkg
 
-def install_all_packages():
-    sel = Selection("Install everything?")
-    sel.add_choice("Yes", True)
-    sel.add_choice("No", False)
-
-    if sel.get_choice():
-        APT.install(all_packages())
-        raise StepBack("Installed all packages")
-
 def delete_all_packages():
     sel = Selection("Delete everything?")
     sel.add_choice("Yes", True)
@@ -1079,7 +1070,6 @@ def search():
 def main():
     sel = Selection("Main Menu")
     sel.add_choice("View Categories", view_categories)
-    sel.add_choice("Install All", install_all_packages)
     sel.add_choice("Uninstall All", delete_all_packages)
     sel.add_choice("Search repository", search)
     sel.add_choice("List installed packages", list_installed_packages)
@@ -1172,3 +1162,5 @@ if __name__ == "__main__":
 
     print("Goodbye")
     exit(0)
+
+   
