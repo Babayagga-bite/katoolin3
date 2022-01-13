@@ -3,9 +3,13 @@ Katoolin3 brings all programs available in Kali Linux to Debian and Ubuntu.
 
 ### Description
 This program is a port of [katoolin](https://github.com/LionSec/katoolin) from [LionSec](https://github.com/LionSec) to python3 and a fork from [forenslcs](https://github.com/forenslcs) Katoolin3 offers several improvements over katoolin:
+
 - __Up to date packages__    
 The old katoolin uses an outdated package list. Katoolin3 always keeps its package list up to date.  
-_(Last updated: 18 Feb 2020)_
+_(Last updated: 13/01/22)_
+
+- __Removed Install all__
+ The option -install all- for installing all the packages has been removed to avoid system failures for a mistake.
 
 - __Improved handling of missing packages__   
 The old katoolin breaks if a package isn't available in the repositories anymore. Katoolin3 detects those and simply ignores them.
